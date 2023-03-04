@@ -10,8 +10,13 @@ class HomePage extends StatelessWidget {
         title: const Text('Shoot'),
       ),
       drawer: const Drawer(),
-      body: const Center(
-        child: Text('Working'),
+      body: const Card(
+        child: Padding(
+          padding: EdgeInsets.all(24),
+          child: Center(
+            child: Text('Working'),
+          ),
+        ),
       ),
     );
   }
