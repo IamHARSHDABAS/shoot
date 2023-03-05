@@ -1,6 +1,5 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
-import 'package:shoot/router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,14 +9,13 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
-        title: const Center(
-          child: Text(
-            'Shoot',
-            style: TextStyle(
-                color: Color.fromRGBO(242, 229, 255, 1), fontSize: 24),
-          ),
+        title: const Text(
+          'Shoot',
+          style:
+              TextStyle(color: Color.fromRGBO(242, 229, 255, 1), fontSize: 24),
         ),
       ),
+      drawer: const Drawer(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(64),
@@ -27,7 +25,7 @@ class HomePage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(
                     MediaQuery.of(context).size.width,
-                    128,
+                    64,
                   ),
                   backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
                   shape: const RoundedRectangleBorder(
@@ -53,7 +51,7 @@ class HomePage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(
                     MediaQuery.of(context).size.width,
-                    128,
+                    64,
                   ),
                   backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
                   shape: const RoundedRectangleBorder(
