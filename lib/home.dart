@@ -21,37 +21,49 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(64),
           child: Column(
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 128,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: const Color.fromRGBO(128, 0, 255, 1)),
-                child: const Center(
-                  child: Text(
-                    'Match',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    128,
                   ),
+                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Match',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
                 ),
               ),
               const SizedBox(
                 height: 64,
               ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 128,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: const Color.fromRGBO(128, 0, 255, 1)),
-                child: const Center(
-                  child: Text(
-                    'Advanced',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    128,
                   ),
+                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Custom',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
                 ),
               ),
             ],
