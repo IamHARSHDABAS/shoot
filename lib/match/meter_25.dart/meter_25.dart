@@ -1,8 +1,8 @@
-import 'package:go_router/go_router.dart';
+// import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
-class Match extends StatelessWidget {
-  const Match({super.key});
+class Match25 extends StatelessWidget {
+  const Match25({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,33 +35,7 @@ class Match extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'TODO',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
-                ),
-              ),
-              const SizedBox(
-                height: 64,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
-                    64,
-                  ),
-                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(100),
-                    ),
-                  ),
-                ),
-                onPressed: () {
-                  GoRouter.of(context).pushNamed('meter_25');
-                },
-                child: const Text(
-                  '25 meter',
+                  'Center',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
@@ -85,7 +59,55 @@ class Match extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'TODO',
+                  'Sports',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+                ),
+              ),
+              const SizedBox(
+                height: 64,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Standard',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+                ),
+              ),
+              const SizedBox(
+                height: 64,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Rapid',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
