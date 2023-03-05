@@ -1,9 +1,7 @@
-import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
-import 'package:shoot/router.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Match extends StatelessWidget {
+  const Match({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +34,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {
-                  GoRouter.of(context).pushNamed('match');
-                },
+                onPressed: () {},
                 child: const Text(
-                  'Match',
+                  '10 meter',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
@@ -64,7 +60,31 @@ class HomePage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'Custom',
+                  '25 meter',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+                ),
+              ),
+              const SizedBox(
+                height: 64,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    128,
+                  ),
+                  backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(100),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  '50 meter',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
