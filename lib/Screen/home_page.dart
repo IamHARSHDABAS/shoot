@@ -8,7 +8,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(128, 0, 255, 1),
-        title: const Text('Shoot'),
+        title: const Center(
+          child: Text(
+            'Shoot',
+            style: TextStyle(
+              color: Color.fromRGBO(13, 0, 26, 1),
+            ),
+            ),
+        ),
       ),
       body: Center(
         child: Container(
@@ -28,6 +35,15 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: const Color.fromRGBO(128, 0, 255, 1)
                     ),
+                    child: const Center(
+                      child: Text(
+                        'Match',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromRGBO(13, 0, 26, 1), 
+                        ),
+                      ),
+                    ),
                   ),
                   Container(
                     width: 128,
@@ -35,6 +51,15 @@ class HomePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color.fromRGBO(128, 0, 255, 1)
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Advanced',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromRGBO(13, 0, 26, 1), 
+                        ),
+                      ),
                     ),
                   )
                 ],
