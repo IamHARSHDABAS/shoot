@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'Custom',
+                  'TODO',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
