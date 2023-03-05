@@ -11,45 +11,36 @@ class HomePage extends StatelessWidget {
         title: const Text('Shoot'),
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 64,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 128,
-                  height: 128,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 10
-                      )
-                    ],
-                    color: const Color.fromRGBO(128, 0, 255, 1)
+        child: Container(
+          color: const Color.fromRGBO(13, 0, 26, 1),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 64,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    width: 128,
+                    height: 128,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromRGBO(128, 0, 255, 1)
+                    ),
                   ),
-                ),
-                Container(
-                  width: 128,
-                  height: 128,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 10
-                      )
-                    ],
-                    color: const Color.fromRGBO(128, 0, 255, 1)
-                  ),
-                )
-              ],
-            ),
-          ],
+                  Container(
+                    width: 128,
+                    height: 128,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromRGBO(128, 0, 255, 1)
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
