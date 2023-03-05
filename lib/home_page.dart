@@ -17,45 +17,45 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 64,
-            ),
-            Container(
-              width: 348,
-              height: 128,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: const Color.fromRGBO(128, 0, 255, 1)),
-              child: const Center(
-                child: Text(
-                  'Match',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+        child: Padding(
+          padding: const EdgeInsets.all(64),
+          child: Column(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 128,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: const Color.fromRGBO(128, 0, 255, 1)),
+                child: const Center(
+                  child: Text(
+                    'Match',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 64,
-            ),
-            Container(
-              width: 348,
-              height: 128,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: const Color.fromRGBO(128, 0, 255, 1)),
-              child: const Center(
-                child: Text(
-                  'Advanced',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+              const SizedBox(
+                height: 64,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 128,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: const Color.fromRGBO(128, 0, 255, 1)),
+                child: const Center(
+                  child: Text(
+                    'Advanced',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Color.fromRGBO(242, 229, 255, 1), fontSize: 32),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
