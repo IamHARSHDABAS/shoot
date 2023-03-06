@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shoot/home.dart';
 import 'package:shoot/match/match.dart';
 import 'package:shoot/match/meter_25.dart';
+import 'package:shoot/timer.dart';
 
 class MyRouter {
   GoRouter router = GoRouter(routes: [
@@ -25,6 +26,13 @@ class MyRouter {
       path: '/match/meter_25',
       pageBuilder: (context, state) {
         return const MaterialPage(child: Match25());
+      },
+    ),
+    GoRoute(
+      name: 'timer',
+      path: '/timer',
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: Timer());
       },
     )
   ]);

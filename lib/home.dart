@@ -55,7 +55,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('timer');
+                },
                 child: const Text(
                   'TODO',
                   textAlign: TextAlign.center,
