@@ -5,7 +5,6 @@ import 'package:shoot/meter_25.dart';
 import 'package:shoot/timer.dart';
 import 'package:shoot/match.dart';
 import 'package:shoot/home.dart';
-// import 'package:shoot/router.dart';
 
 void main() {
   setPathUrlStrategy();

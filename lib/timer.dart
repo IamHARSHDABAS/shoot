@@ -35,9 +35,12 @@ class _MyTimerState extends State<MyTimer> {
     super.initState();
     stopwatch = Stopwatch();
 
-    t = Timer.periodic(const Duration(milliseconds: 30), (timer) {
-      setState(() {});
-    });
+    t = Timer.periodic(
+      const Duration(milliseconds: 30),
+      (timer) {
+        setState(() {});
+      },
+    );
   }
 
   @override
@@ -71,10 +74,11 @@ class _MyTimerState extends State<MyTimer> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(
-                  MediaQuery.of(context).size.width,
-                  64,
-                )),
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                ),
                 onPressed: () {},
                 child: const Text('TODO'),
               ),
@@ -83,10 +87,11 @@ class _MyTimerState extends State<MyTimer> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    minimumSize: Size(
-                  MediaQuery.of(context).size.width,
-                  64,
-                )),
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                ),
                 onPressed: () {},
                 child: const Text('TODO'),
               ),
