@@ -49,7 +49,6 @@ class _MyTimerState extends State<MyTimer> {
           style: TextStyle(fontSize: 24),
         ),
       ),
-      drawer: const Drawer(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(24),

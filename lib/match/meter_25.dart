@@ -13,7 +13,6 @@ class Match25 extends StatelessWidget {
           style: TextStyle(fontSize: 24),
         ),
       ),
-      drawer: const Drawer(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(64),
