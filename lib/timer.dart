@@ -19,24 +19,43 @@ class _TimerState extends State<Timer> {
       ),
       drawer: const Drawer(),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 64,
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(256, 256),
-                  shape: const CircleBorder()),
-              onPressed: () {},
-              child: const Text(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            children: [
+              const SizedBox(height: 32),
+              const Text(
                 '00:00',
-                style: TextStyle(
-                  fontSize: 48
-                ),
+                style: TextStyle(fontSize: 64),
               ),
-            )
-          ],
+              const SizedBox(
+                height: 32,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text('TODO'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width,
+                    64,
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text('TODo'),
+              ),
+            ],
+          ),
         ),
       ),
     );
