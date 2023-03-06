@@ -9,7 +9,7 @@ class MyRouter {
   GoRouter router = GoRouter(routes: [
     GoRoute(
       name: 'home',
-      path: '/',
+      path: '/home',
       pageBuilder: (context, state) {
         return const MaterialPage(child: HomePage());
       },
@@ -30,7 +30,7 @@ class MyRouter {
     ),
     GoRoute(
       name: 'timer',
-      path: '/timer',
+      path: '/', // /timer',
       pageBuilder: (context, state) {
         return const MaterialPage(child: Timer());
       },

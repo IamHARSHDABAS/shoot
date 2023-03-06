@@ -24,20 +24,25 @@ class _TimerState extends State<Timer> {
           child: Column(
             children: [
               const SizedBox(height: 32),
-              const Text(
-                '00:00',
-                style: TextStyle(fontSize: 64),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: const CircleBorder(),
+                    minimumSize: const Size(256, 256)),
+                onPressed: () {},
+                child: const Text(
+                  '00:00',
+                  style: TextStyle(fontSize: 64),
+                ),
               ),
               const SizedBox(
                 height: 32,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
-                    64,
-                  ),
-                ),
+                    minimumSize: Size(
+                  MediaQuery.of(context).size.width,
+                  64,
+                )),
                 onPressed: () {},
                 child: const Text('TODO'),
               ),
@@ -46,11 +51,10 @@ class _TimerState extends State<Timer> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
-                    64,
-                  ),
-                ),
+                    minimumSize: Size(
+                  MediaQuery.of(context).size.width,
+                  64,
+                )),
                 onPressed: () {},
                 child: const Text('TODO'),
               ),
