@@ -1,4 +1,4 @@
-import 'package:go_router/go_router.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).pushNamed('match');
+                  context.vxNav.push(Uri.parse('match'));
                 },
                 child: const Text(
                   'Match',

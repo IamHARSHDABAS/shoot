@@ -1,4 +1,4 @@
-import 'package:go_router/go_router.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
 class Match25 extends StatelessWidget {
@@ -31,7 +31,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).pushNamed('timer');
+                  context.vxNav.push(Uri.parse('timer'));
                 },
                 child: const Text(
                   'Center',
@@ -55,7 +55,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).pushNamed('timer');
+                  context.vxNav.push(Uri.parse('timer'));
                 },
                 child: const Text(
                   'Sports',
@@ -79,7 +79,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).pushNamed('timer');
+                  context.vxNav.push(Uri.parse('timer'));
                 },
                 child: const Text(
                   'Standard',
@@ -103,7 +103,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  GoRouter.of(context).pushNamed('timer');
+                  context.vxNav.push(Uri.parse('timer'));
                 },
                 child: const Text(
                   'Rapid',
