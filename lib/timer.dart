@@ -5,6 +5,15 @@ class Timer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Shoot',
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
+      drawer: const Drawer(),
+      body: const Center()
+    );
   }
 }
