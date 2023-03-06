@@ -32,7 +32,7 @@ class MyRouter {
       name: 'timer',
       path: '/', // /timer',
       pageBuilder: (context, state) {
-        return const MaterialPage(child: Timer());
+        return const MaterialPage(child: MyTimer());
       },
     )
   ]);

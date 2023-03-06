@@ -1,13 +1,45 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
-class Timer extends StatefulWidget {
-  const Timer({super.key});
+class MyTimer extends StatefulWidget {
+  const MyTimer({super.key});
 
   @override
-  State<Timer> createState() => _TimerState();
+  State<MyTimer> createState() => _MyTimerState();
 }
 
-class _TimerState extends State<Timer> {
+class _MyTimerState extends State<MyTimer> {
+  late Stopwatch stopwatch;
+  late Timer t;
+
+  void handleStartStop() {
+    if (stopwatch.isRunning) {
+      stopwatch.stop();
+    } else {
+      stopwatch.start();
+    }
+  }
+
+  String returnFormattedText() {
+    var milli = stopwatch.elapsed.inMilliseconds;
+
+    String milliseconds = (milli % 1000).toString().padLeft(3, "0");
+    String seconds = ((milli ~/ 1000) % 60).toString().padLeft(2, "0");
+    String minutes = ((milli ~/ 1000) ~/ 60).toString().padLeft(2, "0");
+
+    return "$minutes:$seconds:$milliseconds";
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    stopwatch = Stopwatch();
+
+    t = Timer.periodic(const Duration(milliseconds: 30), (timer) {
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +60,9 @@ class _TimerState extends State<Timer> {
                 style: ElevatedButton.styleFrom(
                     shape: const CircleBorder(),
                     minimumSize: const Size(256, 256)),
-                onPressed: () {},
+                onPressed: () {
+                  handleStartStop();
+                },
                 child: const Text(
                   '00:00',
                   style: TextStyle(fontSize: 64),
