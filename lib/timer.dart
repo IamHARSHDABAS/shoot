@@ -58,14 +58,13 @@ class _MyTimerState extends State<MyTimer> {
               const SizedBox(height: 32),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    minimumSize: const Size(256, 256)),
+                    minimumSize: Size(MediaQuery.of(context).size.width, 128)),
                 onPressed: () {
                   handleStartStop();
                 },
-                child: const Text(
-                  '00:00',
-                  style: TextStyle(fontSize: 64),
+                child: Text(
+                  returnFormattedText(),
+                  style: const TextStyle(fontSize: 64),
                 ),
               ),
               const SizedBox(
