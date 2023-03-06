@@ -52,7 +52,7 @@ class _TimerState extends State<Timer> {
                   ),
                 ),
                 onPressed: () {},
-                child: const Text('TODo'),
+                child: const Text('TODO'),
               ),
             ],
           ),
