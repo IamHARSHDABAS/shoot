@@ -53,7 +53,7 @@ class Match extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('meter_25'));
+                  context.vxNav.push(Uri.parse('/match_25'));
                 },
                 child: const Text(
                   '25 meter',

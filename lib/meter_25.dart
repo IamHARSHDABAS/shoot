@@ -31,7 +31,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('timer'));
+                  context.vxNav.push(Uri.parse('/timer'));
                 },
                 child: const Text(
                   'Center',
@@ -55,7 +55,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('timer'));
+                  context.vxNav.push(Uri.parse('/timer'));
                 },
                 child: const Text(
                   'Sports',
@@ -79,7 +79,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('timer'));
+                  context.vxNav.push(Uri.parse('/timer'));
                 },
                 child: const Text(
                   'Standard',
@@ -103,7 +103,7 @@ class Match25 extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('timer'));
+                  context.vxNav.push(Uri.parse('/timer'));
                 },
                 child: const Text(
                   'Rapid',

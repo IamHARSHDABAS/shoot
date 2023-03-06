@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('match'));
+                  context.vxNav.push(Uri.parse('/match'));
                 },
                 child: const Text(
                   'Match',
