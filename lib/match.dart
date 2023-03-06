@@ -20,8 +20,8 @@ class Match extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
+                  minimumSize: const Size(
+                    256,
                     64,
                   ),
                   shape: const RoundedRectangleBorder(
@@ -42,8 +42,8 @@ class Match extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
+                  minimumSize: const Size(
+                    256,
                     64,
                   ),
                   shape: const RoundedRectangleBorder(
@@ -66,8 +66,8 @@ class Match extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
+                  minimumSize: const Size(
+                    256,
                     64,
                   ),
                   shape: const RoundedRectangleBorder(

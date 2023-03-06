@@ -58,8 +58,8 @@ class _MyTimerState extends State<MyTimer> {
             children: [
               const SizedBox(height: 32),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    minimumSize: Size(MediaQuery.of(context).size.width, 128)),
+                style:
+                    ElevatedButton.styleFrom(minimumSize: const Size(256, 128)),
                 onPressed: () {},
                 child: Text(
                   returnFormattedText(),
@@ -71,8 +71,8 @@ class _MyTimerState extends State<MyTimer> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
+                  minimumSize: const Size(
+                    256,
                     64,
                   ),
                 ),
@@ -86,8 +86,8 @@ class _MyTimerState extends State<MyTimer> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    MediaQuery.of(context).size.width,
+                  minimumSize: const Size(
+                    256,
                     64,
                   ),
                 ),
