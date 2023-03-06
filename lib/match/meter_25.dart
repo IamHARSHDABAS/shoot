@@ -1,4 +1,4 @@
-// import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
 class Match25 extends StatelessWidget {
@@ -31,7 +31,9 @@ class Match25 extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('timer');
+                },
                 child: const Text(
                   'Center',
                   textAlign: TextAlign.center,
@@ -53,7 +55,9 @@ class Match25 extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('timer');
+                },
                 child: const Text(
                   'Sports',
                   textAlign: TextAlign.center,
@@ -75,7 +79,9 @@ class Match25 extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('timer');
+                },
                 child: const Text(
                   'Standard',
                   textAlign: TextAlign.center,
@@ -97,7 +103,9 @@ class Match25 extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).pushNamed('timer');
+                },
                 child: const Text(
                   'Rapid',
                   textAlign: TextAlign.center,
