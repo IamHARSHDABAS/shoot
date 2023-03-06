@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shoot/home.dart';
 import 'package:shoot/match/match.dart';
-import 'package:shoot/match/meter_25.dart/meter_25.dart';
+import 'package:shoot/match/meter_25.dart';
 
 class MyRouter {
   GoRouter router = GoRouter(routes: [
