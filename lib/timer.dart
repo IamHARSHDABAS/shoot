@@ -23,11 +23,10 @@ class _MyTimerState extends State<MyTimer> {
   String returnFormattedText() {
     var milli = stopwatch.elapsed.inMilliseconds;
 
-    String milliseconds = (milli % 1000).toString().padLeft(3, "0");
     String seconds = ((milli ~/ 1000) % 60).toString().padLeft(2, "0");
     String minutes = ((milli ~/ 1000) ~/ 60).toString().padLeft(2, "0");
 
-    return "$minutes:$seconds:$milliseconds";
+    return "$minutes:$seconds";
   }
 
   @override
@@ -36,7 +35,7 @@ class _MyTimerState extends State<MyTimer> {
     stopwatch = Stopwatch();
 
     t = Timer.periodic(
-      const Duration(milliseconds: 30),
+      const Duration(milliseconds: 128),
       (timer) {
         setState(() {});
       },
@@ -61,9 +60,7 @@ class _MyTimerState extends State<MyTimer> {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     minimumSize: Size(MediaQuery.of(context).size.width, 128)),
-                onPressed: () {
-                  handleStartStop();
-                },
+                onPressed: () {},
                 child: Text(
                   returnFormattedText(),
                   style: const TextStyle(fontSize: 64),
@@ -79,8 +76,10 @@ class _MyTimerState extends State<MyTimer> {
                     64,
                   ),
                 ),
-                onPressed: () {},
-                child: const Text('TODO'),
+                onPressed: () {
+                  handleStartStop();
+                },
+                child: const Text('Start/Stop'),
               ),
               const SizedBox(
                 height: 16,
