@@ -1,9 +1,9 @@
 import 'package:url_strategy/url_strategy.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
-import 'package:shoot/timer.dart';
-import 'package:shoot/match.dart';
-import 'package:shoot/home.dart';
+import 'package:shoot/screens/timer.dart';
+import 'package:shoot/screens/match.dart';
+import 'package:shoot/screens/home.dart';
 
 void main() {
   setPathUrlStrategy();
