@@ -1,7 +1,6 @@
 import 'package:url_strategy/url_strategy.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
-import 'package:shoot/meter_25.dart';
 import 'package:shoot/timer.dart';
 import 'package:shoot/match.dart';
 import 'package:shoot/home.dart';
@@ -28,7 +27,6 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (_, __) => const MaterialPage(child: HomePage()),
           '/match': (_, __) => const MaterialPage(child: Match()),
-          '/match_25': (_, __) => const MaterialPage(child: Match25()),
           '/timer': (_, __) => const MaterialPage(child: MyTimer()),
         },
       ),

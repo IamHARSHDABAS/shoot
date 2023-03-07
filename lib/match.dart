@@ -30,16 +30,16 @@ class Match extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.vxNav.push(Uri.parse('/timer'));
+                },
                 child: const Text(
-                  'TODO',
+                  'Center',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 32),
                 ),
               ),
-              const SizedBox(
-                height: 64,
-              ),
+              const SizedBox(height: 32),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(
@@ -53,17 +53,15 @@ class Match extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.vxNav.push(Uri.parse('/match_25'));
+                  context.vxNav.push(Uri.parse('/timer'));
                 },
                 child: const Text(
-                  '25 meter',
+                  'Sports',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 32),
                 ),
               ),
-              const SizedBox(
-                height: 64,
-              ),
+              const SizedBox(height: 32),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(
@@ -76,9 +74,33 @@ class Match extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.vxNav.push(Uri.parse('/timer'));
+                },
                 child: const Text(
-                  'TODO',
+                  'Standard',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 32),
+                ),
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(
+                    256,
+                    64,
+                  ),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(128),
+                    ),
+                  ),
+                ),
+                onPressed: () {
+                  context.vxNav.push(Uri.parse('/timer'));
+                },
+                child: const Text(
+                  'Rapid',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 32),
                 ),

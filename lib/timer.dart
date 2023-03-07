@@ -66,9 +66,7 @@ class _MyTimerState extends State<MyTimer> {
                   style: const TextStyle(fontSize: 64),
                 ),
               ),
-              const SizedBox(
-                height: 32,
-              ),
+              const SizedBox(height: 32),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(
@@ -81,9 +79,7 @@ class _MyTimerState extends State<MyTimer> {
                 },
                 child: const Text('Start/Stop'),
               ),
-              const SizedBox(
-                height: 16,
-              ),
+              const SizedBox(height: 16),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(
