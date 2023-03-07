@@ -1,4 +1,4 @@
-import 'package:velocity_x/velocity_x.dart';
+import 'package:shoot/widget/my_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,49 +20,9 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(64),
           child: Column(
             children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(
-                    256,
-                    64,
-                  ),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(128),
-                    ),
-                  ),
-                ),
-                onPressed: () {
-                  context.vxNav.push(Uri.parse('/match'));
-                },
-                child: const Text(
-                  'Match',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 32),
-                ),
-              ),
-              const SizedBox(
-                height: 64,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(
-                    256,
-                    64,
-                  ),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(128),
-                    ),
-                  ),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  'TODO',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 32),
-                ),
-              ),
+              MyElevatedButton().elevatedButton(context, 'Match', '/match'),
+              const SizedBox(height: 64),
+              MyElevatedButton().elevatedButton(context, 'TODO', '/todo')
             ],
           ),
         ),

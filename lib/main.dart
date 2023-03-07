@@ -1,3 +1,4 @@
+import 'package:shoot/screens/todo.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       routerDelegate: VxNavigator(
         routes: {
           '/': (_, __) => const MaterialPage(child: HomePage()),
+          '/todo': (_, __) => const MaterialPage(child: ToDo()),
           '/match': (_, __) => const MaterialPage(child: Match()),
           '/timer': (_, __) => const MaterialPage(child: MyTimer()),
         },
