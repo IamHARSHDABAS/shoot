@@ -18,6 +18,8 @@ class Match extends StatelessWidget {
           padding: const EdgeInsets.all(64),
           child: Column(
             children: [
+              MyElevatedButton().elevatedButton(context, 'Air', '/timer'),
+              const SizedBox(height: 32),
               MyElevatedButton().elevatedButton(context, 'Center', '/timer'),
               const SizedBox(height: 32),
               MyElevatedButton().elevatedButton(context, 'Sports', '/timer'),
@@ -25,6 +27,8 @@ class Match extends StatelessWidget {
               MyElevatedButton().elevatedButton(context, 'Standard', '/timer'),
               const SizedBox(height: 32),
               MyElevatedButton().elevatedButton(context, 'Rapid', '/timer'),
+              const SizedBox(height: 32),
+              MyElevatedButton().elevatedButton(context, 'Free', '/timer'),
             ],
           ),
         ),

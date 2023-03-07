@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromRGBO(128, 0, 255, 1)),
+          seedColor: const Color.fromRGBO(128, 0, 255, 1),
+        ),
       ),
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(

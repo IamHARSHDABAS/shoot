@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             children: [
               MyElevatedButton().elevatedButton(context, 'Match', '/match'),
               const SizedBox(height: 64),
-              MyElevatedButton().elevatedButton(context, 'TODO', '/todo')
+              MyElevatedButton().elevatedButton(context, 'TODO', '/todo'),
             ],
           ),
         ),
