@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:shoot/screens/timer.dart';
 
 class MyElevatedButton {
@@ -19,8 +16,12 @@ class MyElevatedButton {
         ),
       ),
       onPressed: () {
-        Get.to(const MyTimer());
-        // context.vxNav.push(Uri.parse(next));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MyTimer(),
+          ),
+        );
       },
       child: Text(
         name,

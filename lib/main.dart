@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter/material.dart';
-import 'package:shoot/screens/timer.dart';
 import 'package:shoot/screens/match.dart';
 
 void main() {
@@ -22,10 +21,11 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromRGBO(128, 0, 255, 1),
         ),
       ),
-      getPages: [
-        GetPage(name: '/', page: () => const Match()),
-        GetPage(name: '/timer', page: () => const MyTimer()),
-      ],
+      home: const Match(),
+      // getPages: [
+      //   GetPage(name: '/', page: () => const Match()),
+      //   GetPage(name: '/timer', page: () => const MyTimer()),
+      // ],
     );
   }
 }
