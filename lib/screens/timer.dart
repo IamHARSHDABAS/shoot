@@ -36,7 +36,6 @@ class _MyTimerState extends State<MyTimer> {
     String twoDigits(int n) => n.toString().padLeft(2, '0');
     final minutes = twoDigits(duration.inMinutes.remainder(60));
     final seconds = twoDigits(duration.inSeconds.remainder(60));
-
     return '$minutes:$seconds';
   }
 
@@ -55,19 +54,13 @@ class _MyTimerState extends State<MyTimer> {
           child: Column(
             children: [
               const SizedBox(height: 32),
-              ElevatedButton(
-                style:
-                    ElevatedButton.styleFrom(minimumSize: const Size(256, 128)),
-                onPressed: () {},
-                child: Text(
-                  time(),
-                  style: const TextStyle(fontSize: 64),
-                ),
-              ),
+              MyElevatedButton().elevatedButton(context, 256, 128, 64, time(), '/todo'),
               const SizedBox(height: 32),
-              MyElevatedButton().elevatedButton(context, 'Start/Stop', '/todo'),
+              MyElevatedButton()
+                  .elevatedButton(context, 256, 64, 32, 'Start/Stop', '/todo'),
               const SizedBox(height: 32),
-              MyElevatedButton().elevatedButton(context, 'TODO', '/todo'),
+              MyElevatedButton()
+                  .elevatedButton(context, 256, 64, 32, 'TODO', '/todo'),
             ],
           ),
         ),
