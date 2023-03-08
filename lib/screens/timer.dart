@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class MyTimer extends StatefulWidget {
@@ -9,37 +10,33 @@ class MyTimer extends StatefulWidget {
 }
 
 class _MyTimerState extends State<MyTimer> {
-  late Stopwatch stopwatch;
-  late Timer t;
-
-  void handleStartStop() {
-    if (stopwatch.isRunning) {
-      stopwatch.stop();
-    } else {
-      stopwatch.start();
-    }
-  }
-
-  String returnFormattedText() {
-    var milli = stopwatch.elapsed.inMilliseconds;
-
-    String seconds = ((milli ~/ 1000) % 60).toString().padLeft(2, "0");
-    String minutes = ((milli ~/ 1000) ~/ 60).toString().padLeft(2, "0");
-
-    return "$minutes:$seconds";
-  }
+  Duration duration = const Duration();
 
   @override
   void initState() {
     super.initState();
-    stopwatch = Stopwatch();
+    startTimer();
+  }
 
-    t = Timer.periodic(
-      const Duration(milliseconds: 128),
-      (timer) {
-        setState(() {});
-      },
-    );
+  void addTime() {
+    const addSecond = 1;
+
+    setState(() {
+      final second = duration.inSeconds + addSecond;
+      duration = Duration(seconds: second);
+    });
+  }
+
+  void startTimer() {
+    Timer.periodic(const Duration(seconds: 1), (_) => addTime());
+  }
+
+  String time() {
+    String twoDigits(int n) => n.toString().padLeft(2, '0');
+    final minutes = twoDigits(duration.inMinutes.remainder(60));
+    final seconds = twoDigits(duration.inSeconds.remainder(60));
+
+    return '$minutes :$seconds';
   }
 
   @override
@@ -62,7 +59,7 @@ class _MyTimerState extends State<MyTimer> {
                     ElevatedButton.styleFrom(minimumSize: const Size(256, 128)),
                 onPressed: () {},
                 child: Text(
-                  returnFormattedText(),
+                  time(),
                   style: const TextStyle(fontSize: 64),
                 ),
               ),
@@ -74,9 +71,7 @@ class _MyTimerState extends State<MyTimer> {
                     64,
                   ),
                 ),
-                onPressed: () {
-                  handleStartStop();
-                },
+                onPressed: () {},
                 child: const Text('Start/Stop'),
               ),
               const SizedBox(height: 16),

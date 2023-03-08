@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (_, __) => const MaterialPage(child: HomePage()),
           '/todo': (_, __) => const MaterialPage(child: ToDo()),
-          '/match': (_, __) => const MaterialPage(child: Match()),
-          '/timer': (_, __) => const MaterialPage(child: MyTimer()),
+          '/timer': (_, __) => const MaterialPage(child: Match()),
+          '/match': (_, __) => const MaterialPage(child: MyTimer()),
         },
       ),
     );
