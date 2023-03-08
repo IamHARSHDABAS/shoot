@@ -1,8 +1,11 @@
-import 'package:velocity_x/velocity_x.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shoot/screens/timer.dart';
 
 class MyElevatedButton {
-  Widget elevatedButton(BuildContext context, name, next) {
+  Widget elevatedButton(BuildContext context, name) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(
@@ -16,7 +19,8 @@ class MyElevatedButton {
         ),
       ),
       onPressed: () {
-        context.vxNav.push(Uri.parse(next));
+        Get.to(const MyTimer());
+        // context.vxNav.push(Uri.parse(next));
       },
       child: Text(
         name,

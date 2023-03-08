@@ -1,10 +1,8 @@
-import 'package:shoot/screens/todo.dart';
+import 'package:get/get.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 import 'package:shoot/screens/timer.dart';
 import 'package:shoot/screens/match.dart';
-import 'package:shoot/screens/home.dart';
 
 void main() {
   setPathUrlStrategy();
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -24,15 +22,10 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromRGBO(128, 0, 255, 1),
         ),
       ),
-      routeInformationParser: VxInformationParser(),
-      routerDelegate: VxNavigator(
-        routes: {
-          '/': (_, __) => const MaterialPage(child: Match()),
-          '/home': (_, __) => const MaterialPage(child: HomePage()),
-          '/timer': (_, __) => const MaterialPage(child: MyTimer()),
-          '/todo': (_, __) => const MaterialPage(child: ToDo()),
-        },
-      ),
+      getPages: [
+        GetPage(name: '/', page: () => const Match()),
+        GetPage(name: '/timer', page: () => const MyTimer()),
+      ],
     );
   }
 }
