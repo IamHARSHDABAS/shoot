@@ -7,17 +7,20 @@ class Match extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Shoot',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      // appBar: AppBar(
+      //   title: const Center(
+      //     child: Text(
+      //       'Shoot',
+      //       style: TextStyle(fontSize: 24),
+      //     ),
+      //   ),
+      // ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(64),
           child: Column(
             children: [
+              const SizedBox(height: 32),
               MyElevatedButton().elevatedButton(context, 'Air', '/timer'),
               const SizedBox(height: 32),
               MyElevatedButton().elevatedButton(context, 'Center', '/timer'),
