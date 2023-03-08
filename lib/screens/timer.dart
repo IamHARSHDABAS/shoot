@@ -1,4 +1,3 @@
-import 'package:shoot/widget/my_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -11,10 +10,21 @@ class MyTimer extends StatefulWidget {
 
 class _MyTimerState extends State<MyTimer> {
   Duration duration = const Duration(seconds: 10);
+  Timer? timer;
 
   @override
   void initState() {
     super.initState();
+    resetTimer();
+  }
+
+  void resetTimer() {
+    setState(() {
+      duration = const Duration(seconds: 10);
+    });
+  }
+
+  void startTimer() {
     Timer.periodic(
       const Duration(seconds: 1),
       (timer) {
@@ -65,9 +75,31 @@ class _MyTimerState extends State<MyTimer> {
                 ),
               ),
               const SizedBox(height: 32),
-              MyElevatedButton().elevatedButton(context, 'Start/Stop', '/todo'),
-              const SizedBox(height: 32),
-              MyElevatedButton().elevatedButton(context, 'TODO', '/todo'),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(
+                    256,
+                    64,
+                  ),
+                ),
+                onPressed: () {
+                  startTimer();
+                },
+                child: const Text('Start'),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(
+                    256,
+                    64,
+                  ),
+                ),
+                onPressed: () {
+                  resetTimer();
+                },
+                child: const Text('Reset'),
+              ),
             ],
           ),
         ),
