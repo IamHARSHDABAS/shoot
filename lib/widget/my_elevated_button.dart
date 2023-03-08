@@ -2,13 +2,12 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
 class MyElevatedButton {
-  Widget elevatedButton(BuildContext context, double height, double width,
-      double font, String name, String next) {
+  Widget elevatedButton(BuildContext context, name, next) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        minimumSize: Size(
-          height,
-          width,
+        minimumSize: const Size(
+          256,
+          64,
         ),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
@@ -22,7 +21,7 @@ class MyElevatedButton {
       child: Text(
         name,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: font),
+        style: const TextStyle(fontSize: 32),
       ),
     );
   }

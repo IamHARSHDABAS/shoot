@@ -20,9 +20,9 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(64),
           child: Column(
             children: [
-              MyElevatedButton().elevatedButton(context, 256, 64, 32, 'Match', '/match'),
+              MyElevatedButton().elevatedButton(context, 'Match', '/match'),
               const SizedBox(height: 64),
-              MyElevatedButton().elevatedButton(context, 256, 64, 32, 'TODO', '/todo'),
+              MyElevatedButton().elevatedButton(context, 'TODO', '/todo'),
             ],
           ),
         ),
