@@ -1,6 +1,6 @@
-import 'dart:async';
-
+import 'package:shoot/widget/my_elevated_button.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class MyTimer extends StatefulWidget {
   const MyTimer({super.key});
@@ -65,27 +65,9 @@ class _MyTimerState extends State<MyTimer> {
                 ),
               ),
               const SizedBox(height: 32),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(
-                    256,
-                    64,
-                  ),
-                ),
-                onPressed: () {},
-                child: const Text('Start/Stop'),
-              ),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(
-                    256,
-                    64,
-                  ),
-                ),
-                onPressed: () {},
-                child: const Text('TODO'),
-              ),
+              MyElevatedButton().elevatedButton(context, 'Start/Stop', '/todo'),
+              const SizedBox(height: 32),
+              MyElevatedButton().elevatedButton(context, 'TODO', '/todo'),
             ],
           ),
         ),
