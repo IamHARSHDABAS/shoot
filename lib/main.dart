@@ -22,10 +22,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Match(),
-      // getPages: [
-      //   GetPage(name: '/', page: () => const Match()),
-      //   GetPage(name: '/timer', page: () => const MyTimer()),
-      // ],
     );
   }
 }

@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class MyTimer extends StatefulWidget {
-  const MyTimer({super.key});
-
+  final timerFromSuper;
+  const MyTimer(this.timerFromSuper, {super.key});  
+  
   @override
   State<MyTimer> createState() => _MyTimerState();
 }
 
 class _MyTimerState extends State<MyTimer> {
-  Duration duration = const Duration(seconds: 10);
+  Duration duration = Duration(seconds: timerFromSuper);
 
   @override
   void initState() {
@@ -19,7 +20,7 @@ class _MyTimerState extends State<MyTimer> {
 
   void resetTimer() {
     setState(() {
-      duration = const Duration(seconds: 10);
+      duration = Duration(seconds: timerFromSuper);
     });
   }
 

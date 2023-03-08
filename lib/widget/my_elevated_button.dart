@@ -19,7 +19,7 @@ class MyElevatedButton {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const MyTimer(),
+            builder: (context) => const MyTimer(5),
           ),
         );
       },
