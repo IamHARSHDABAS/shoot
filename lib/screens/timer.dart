@@ -10,7 +10,6 @@ class MyTimer extends StatefulWidget {
 
 class _MyTimerState extends State<MyTimer> {
   Duration duration = const Duration(seconds: 10);
-  Timer? timer;
 
   @override
   void initState() {
