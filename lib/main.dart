@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(
         routes: {
-          '/': (_, __) => const MaterialPage(child: HomePage()),
+          '/home': (_, __) => const MaterialPage(child: HomePage()),
           '/todo': (_, __) => const MaterialPage(child: ToDo()),
-          '/timer': (_, __) => const MaterialPage(child: Match()),
-          '/match': (_, __) => const MaterialPage(child: MyTimer()),
+          '/': (_, __) => const MaterialPage(child: Match()),
+          '/timer': (_, __) => const MaterialPage(child: MyTimer()),
         },
       ),
     );
